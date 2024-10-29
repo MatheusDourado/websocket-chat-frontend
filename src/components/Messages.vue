@@ -34,10 +34,11 @@
 	const messagesContainer = ref(null);
 	const hasScrollbar = ref(false);
 
-	// Ordenar mensagens por timestamp
+	// Ordenar mensagens por timestamp (descendente)
 	const sortedMessages = computed(() => {
-		return [...messages.value].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+		return [...messages.value].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 	});
+
 
 	function checkForScrollbar() {
 		if (messagesContainer.value) {
