@@ -12,7 +12,7 @@
 
 		<!-- Dropdown de Emojis -->
 		<div v-if="isEmojiPickerVisible"
-			class="absolute bottom-full left-0 bottom-12 w-full bg-gray-700 rounded-lg shadow-lg p-2 z-10">
+			class="absolute bottom-full left-0 bottom-[48px] w-full bg-gray-700 rounded-lg shadow-lg p-2 z-10">
 			<div class="grid grid-cols-8 gap-2">
 				<button v-for="emoji in emojis" :key="emoji" @click="addEmoji(emoji)"
 					class="text-xl focus:outline-none">
